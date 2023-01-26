@@ -44,6 +44,71 @@ provides output in the client side. The server side processing can be views in 
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Perimeter of Rectangle</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<style type="text/css">
+body 
+{
+background-color:purple;
+}
+.edge {
+width: 1060px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 300px;
+padding-left: 200px;
+}
+.box {
+display:block;
+border: Thick dashed lime;
+width: 300px;
+min-height: 200px;
+font-size: 30px;
+background-color: purple;
+}
+.formelt{
+color: yellow;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 5px;
+}
+h1
+{
+color: yellow;
+text-align: center;
+padding-top: 30px;
+}
+</style>
+</head>
+<body>
+<div class="edge">
+<div class="box">
+<h1>Perimeter of a Rectangle</h1>
+<form method="POST">
+{% csrf_token %}
+<div class="formelt">
+Length : <input type="text" name="length" value="{{l}}"></input>(in m)<br/>
+</div>
+<div class="formelt">
+Breadth : <input type="text" name="breadth" value="{{b}}"></input>(in m)<br/>
+</div>
+<div class="formelt">
+<input type="submit" value="Calculate"></input><br/>
+</div>
+<div class="formelt">
+Perimeter : <input type="text" name="area" value="{{Perimeter}}"></input>m<sup>2</sup><br/>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
+```
 
 
 
